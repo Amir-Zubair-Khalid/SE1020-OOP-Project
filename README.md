@@ -7,10 +7,10 @@ A web-based vehicle rental system built for the **SE1020 – Object Oriented Pro
 | Member | Component | Branch |
 |---|---|---|
 | Amir | User Management (Customer Accounts) | `amir-user` |
-| Matheesha Kalpana | Vehicle Management | `panda-vehicle` |
+| Matheesha | Vehicle Management | `panda-vehicle` |
 | Mario | Booking & Returns | `mario-booking` |
 | Mahima | Payment & Billing | `mahima-payment` |
-| TBD | Admin Management | `admin-management` |
+| Sanelu | Admin Management | `admin-management` |
 
 ## Tech Stack
 
