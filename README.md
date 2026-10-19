@@ -62,6 +62,10 @@ A web-based vehicle rental system built for the **SE1020 – Object Oriented Pro
 - **Delete:** remove failed or duplicate payment records
 - **OOP:** `Payment` (encapsulation), `CardPayment`, `CashPayment` and `OnlinePayment` extend `Payment` (inheritance), different processing and fee logic per method (polymorphism)
 
+## Class Diagram
+
+![Class Diagram](Class%20Diagram.png)
+
 ## Project Structure
 
 ```
