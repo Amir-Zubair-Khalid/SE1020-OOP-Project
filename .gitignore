@@ -1,0 +1,5 @@
+target/
+.idea/
+.smarttomcat/
+*.iml
+.DS_Store

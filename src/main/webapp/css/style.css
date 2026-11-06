@@ -1,0 +1,270 @@
+/* ==========================================================
+   Vehicle Rental System - theme
+   Colours: deep ink navy + licence-plate amber accent
+   Fonts: Sora (headings), Manrope (body)
+   ========================================================== */
+:root {
+    --ink: #13213a;
+    --ink-2: #1d3157;
+    --brand: #2453d6;
+    --brand-dark: #1b40ab;
+    --amber: #f5b72e;
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --line: #e2e7f0;
+    --muted: #64708a;
+    --good: #16794a;   --good-bg: #e2f5ea;
+    --warn: #9a6200;   --warn-bg: #fdf0d5;
+    --bad: #b42531;    --bad-bg: #fce5e7;
+    --info: #2453d6;   --info-bg: #e7eefe;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(19, 33, 58, .05), 0 8px 24px rgba(19, 33, 58, .06);
+    --bs-primary: var(--brand);
+    --bs-primary-rgb: 36, 83, 214;
+    --bs-body-font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--bs-body-font-family);
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4, h5, .display-font { font-family: "Sora", "Manrope", system-ui, sans-serif; letter-spacing: -.01em; }
+main.page { flex: 1; padding-block: 32px 48px; }
+a { color: var(--brand); }
+
+/* ---------- Navbar ---------- */
+.app-nav { background: var(--ink); padding-block: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+.app-nav .navbar-brand { font-family: "Sora", sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 10px; color: #fff; }
+.brand-plate {
+    background: var(--amber); color: #1a1a1a; font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 11px; font-weight: 700; letter-spacing: .08em; padding: 3px 7px; border-radius: 4px; border: 1.5px solid #1a1a1a;
+}
+.app-nav .nav-link { color: rgba(255,255,255,.72); border-radius: 8px; padding: 7px 12px !important; font-weight: 500; display: flex; align-items: center; gap: 7px; }
+.app-nav .nav-link:hover { color: #fff; background: rgba(255,255,255,.08); }
+.app-nav .nav-link.active { color: #fff; background: rgba(255,255,255,.15); }
+.user-chip { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; }
+.user-avatar {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--amber); color: var(--ink);
+    display: grid; place-items: center; font-weight: 800; text-transform: uppercase;
+}
+.role-tag { font-size: 10.5px; letter-spacing: .08em; font-weight: 700; padding: 2px 7px; border-radius: 4px; border: 1px solid rgba(255,255,255,.35); color: rgba(255,255,255,.85); }
+.btn-logout { color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 8px; padding: 5px 12px; font-size: 13px; }
+.btn-logout:hover { background: rgba(255,255,255,.1); color: #fff; }
+
+/* ---------- Page headers ---------- */
+.page-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+.page-head h1 { font-size: 28px; font-weight: 700; margin: 0; }
+.page-head p { color: var(--muted); margin: 4px 0 0; }
+
+/* ---------- Cards / panels ---------- */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
+.panel-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.form-narrow { max-width: 560px; }
+
+/* ---------- Buttons ---------- */
+.btn { border-radius: 10px; font-weight: 600; padding: 8px 16px; display: inline-flex; align-items: center; gap: 7px; }
+.btn-sm { padding: 5px 11px; font-size: 13px; border-radius: 8px; }
+.btn-primary { background: var(--brand); border-color: var(--brand); }
+.btn-primary:hover, .btn-primary:focus { background: var(--brand-dark); border-color: var(--brand-dark); }
+.btn-light { background: var(--surface); border: 1px solid var(--line); color: var(--ink); }
+.btn-light:hover { border-color: #c5ccda; background: #f8f9fc; }
+.btn-soft-danger { background: var(--bad-bg); color: var(--bad); border: 0; }
+.btn-soft-danger:hover { background: var(--bad); color: #fff; }
+.btn-soft-success { background: var(--good-bg); color: var(--good); border: 0; }
+.btn-soft-success:hover { background: var(--good); color: #fff; }
+.btn-soft { background: var(--info-bg); color: var(--brand); border: 0; }
+.btn-soft:hover { background: var(--brand); color: #fff; }
+
+/* ---------- Forms ---------- */
+.form-label { font-weight: 600; font-size: 13.5px; color: #334060; margin-bottom: 6px; }
+.form-control, .form-select { border-radius: 10px; border-color: var(--line); padding: 9px 12px; background-color: #fbfcfe; }
+.form-control:focus, .form-select:focus { border-color: var(--brand); box-shadow: 0 0 0 .2rem rgba(36,83,214,.15); background-color: #fff; }
+.form-hint { font-size: 12.5px; color: var(--muted); margin-top: 5px; }
+.input-icon { position: relative; }
+.input-icon > i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.input-icon > .form-control, .input-icon > .form-select { padding-left: 36px; }
+
+/* ---------- Tables ---------- */
+.table-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.table-card .table-responsive { margin: 0; }
+.table-modern { margin: 0; font-variant-numeric: tabular-nums; }
+.table-modern thead th {
+    background: #f7f9fc; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em;
+    font-weight: 700; border-bottom: 1px solid var(--line); padding: 12px 16px; white-space: nowrap;
+}
+.table-modern td { padding: 13px 16px; vertical-align: middle; border-color: var(--line); white-space: nowrap; }
+.table-modern tbody tr:hover { background: #fafbfe; }
+.table-modern tbody tr:last-child td { border-bottom: 0; }
+.num { text-align: right; }
+.text-muted-2 { color: var(--muted); }
+.id-cell { color: var(--muted); font-weight: 600; }
+
+/* ---------- Status badges ---------- */
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; }
+.status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.status-AVAILABLE, .status-RETURNED, .status-PAID { background: var(--good-bg); color: var(--good); }
+.status-MAINTENANCE, .status-PENDING, .status-PREMIUM { background: var(--warn-bg); color: var(--warn); }
+.status-CANCELLED, .status-ADMIN { background: var(--bad-bg); color: var(--bad); }
+.status-BOOKED, .status-REGULAR { background: var(--info-bg); color: var(--info); }
+
+/* ---------- Licence plate ---------- */
+.plate {
+    display: inline-block; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 700; font-size: 12.5px;
+    letter-spacing: .08em; background: var(--amber); color: #161616; border: 2px solid #161616; border-radius: 5px; padding: 1px 8px;
+}
+
+/* ---------- Alerts ---------- */
+.flash { border: 0; border-radius: 12px; display: flex; align-items: center; gap: 10px; font-weight: 500; box-shadow: var(--shadow); }
+.flash.alert-success { background: var(--good-bg); color: var(--good); }
+.flash.alert-danger { background: var(--bad-bg); color: var(--bad); }
+.flash.alert-info { background: var(--info-bg); color: var(--ink); }
+
+/* ---------- Empty state ---------- */
+.empty-state { text-align: center; padding: 48px 20px; color: var(--muted); }
+.empty-state i { font-size: 40px; display: block; margin-bottom: 10px; color: #b7c0d2; }
+.empty-state h3 { font-size: 17px; color: var(--ink); margin-bottom: 6px; }
+
+/* ---------- Toolbar ---------- */
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+.toolbar .input-icon { flex: 1 1 260px; }
+.toolbar .form-select { width: auto; min-width: 150px; }
+
+/* ---------- Hero / home ---------- */
+.hero { background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%); color: #fff; border-radius: 20px; padding: 48px 40px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(245,183,46,.35), transparent 70%); }
+.hero h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; max-width: 620px; }
+.hero p { color: rgba(255,255,255,.75); max-width: 540px; font-size: 16px; }
+.hero .btn-primary { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.hero .btn-primary:hover { background: #ffc94d; border-color: #ffc94d; }
+.hero .btn-outline-light { border-radius: 10px; }
+.type-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+.type-tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.type-tile i { font-size: 28px; color: var(--brand); }
+.type-tile h3 { font-size: 17px; margin: 10px 0 4px; }
+.type-tile p { color: var(--muted); margin: 0; font-size: 14px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 28px; }
+.step { display: flex; gap: 12px; align-items: flex-start; }
+.step-num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--info-bg); color: var(--brand); font-weight: 800; display: grid; place-items: center; }
+
+/* ---------- Auth pages ---------- */
+.auth-wrap { display: grid; grid-template-columns: 1fr 1fr; max-width: 980px; margin: 0 auto; background: var(--surface); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; border: 1px solid var(--line); }
+.auth-side { background: linear-gradient(160deg, var(--ink), var(--ink-2)); color: #fff; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
+.auth-side h2 { font-weight: 800; font-size: 26px; }
+.auth-side p, .auth-side li { color: rgba(255,255,255,.78); }
+.auth-side ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.auth-side li i { color: var(--amber); margin-right: 8px; }
+.auth-form { padding: 40px; }
+.auth-form h1 { font-size: 26px; font-weight: 700; }
+@media (max-width: 820px) { .auth-wrap { grid-template-columns: 1fr; } .auth-side { padding: 28px; } .auth-form { padding: 28px; } }
+
+/* ---------- Dashboard ---------- */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.stat-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); display: flex; gap: 16px; align-items: center; }
+.stat-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-size: 22px; flex: none; }
+.stat-label { color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+.stat-value { font-family: "Sora", sans-serif; font-size: 26px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.quick-link { display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--surface); transition: border-color .15s, transform .15s; }
+.quick-link:hover { border-color: var(--brand); transform: translateY(-1px); color: var(--ink); }
+.quick-link i { font-size: 20px; color: var(--brand); }
+
+/* ---------- Vehicle cards ---------- */
+.vehicle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.vehicle-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+.vehicle-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(19,33,58,.1); }
+.vehicle-visual { height: 110px; display: grid; place-items: center; font-size: 52px; color: var(--brand); background: linear-gradient(135deg, #eef3ff, #f7f9fe); position: relative; }
+.vehicle-visual .status { position: absolute; top: 12px; right: 12px; }
+.vehicle-visual .type-label { position: absolute; top: 12px; left: 12px; font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--muted); background: #fff; padding: 3px 8px; border-radius: 6px; }
+.vehicle-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.vehicle-name { font-family: "Sora", sans-serif; font-weight: 700; font-size: 17px; margin: 0; }
+.vehicle-price { font-size: 13px; color: var(--muted); }
+.vehicle-price b { font-size: 20px; color: var(--ink); font-family: "Sora", sans-serif; }
+.vehicle-actions { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
+.vehicle-actions .btn, .vehicle-actions form { flex: 1; }
+.vehicle-actions form .btn { width: 100%; justify-content: center; }
+.vehicle-actions > .btn { justify-content: center; }
+.vehicle-card.unavailable .vehicle-visual { filter: grayscale(.8); opacity: .75; }
+
+/* ---------- Summary box (booking / return) ---------- */
+.summary { display: grid; gap: 10px; }
+.summary-row { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.summary-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.summary-row span:first-child { color: var(--muted); }
+.summary-row span:last-child { font-weight: 600; text-align: right; }
+.estimate { background: var(--info-bg); border-radius: 12px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.estimate b { font-family: "Sora", sans-serif; font-size: 20px; }
+
+/* ---------- Invoice ---------- */
+.invoice { max-width: 640px; }
+.invoice-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 18px; border-bottom: 2px solid var(--ink); margin-bottom: 8px; flex-wrap: wrap; }
+.invoice-head h2 { font-size: 22px; font-weight: 800; margin: 0; }
+.invoice-no { color: var(--muted); font-size: 13px; }
+.inv-line { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--line); font-variant-numeric: tabular-nums; }
+.inv-line small { display: block; color: var(--muted); font-size: 12px; }
+.inv-line .amt { font-weight: 600; white-space: nowrap; }
+.inv-total { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; margin-top: 6px; border-top: 2px solid var(--ink); }
+.inv-total b { font-family: "Sora", sans-serif; font-size: 24px; font-variant-numeric: tabular-nums; }
+.method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.method-option { position: relative; border: 2px solid var(--line); border-radius: 12px; padding: 14px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; background: #fbfcfe; transition: border-color .15s, background .15s; margin: 0; }
+.method-option input { position: absolute; opacity: 0; pointer-events: none; }
+.method-option:has(input:checked) { border-color: var(--brand); background: var(--info-bg); }
+.method-option i { font-size: 22px; color: var(--brand); }
+.method-option .m-name { font-weight: 700; margin-top: 4px; }
+.method-option .m-note { font-size: 12.5px; color: var(--muted); }
+.method-option .m-amt { font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 6px; }
+.pay-total { display: flex; justify-content: space-between; align-items: center; background: var(--ink); color: #fff; border-radius: 12px; padding: 14px 18px; }
+.pay-total b { font-family: "Sora", sans-serif; font-size: 22px; font-variant-numeric: tabular-nums; }
+
+/* ---------- Profile ---------- */
+.profile-card { display: flex; align-items: center; gap: 16px; }
+.profile-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--amber); color: var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 26px; text-transform: uppercase; flex: none; }
+.perk-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.perk-list li { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+.perk-list li span:first-child { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.app-footer { border-top: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 13px; padding-block: 18px; }
+
+/* ---------- Confirm modal ---------- */
+.modal-content { border: 0; border-radius: 16px; box-shadow: 0 20px 60px rgba(19,33,58,.25); }
+.modal-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--bad-bg); color: var(--bad); display: grid; place-items: center; font-size: 22px; margin-bottom: 12px; }
+
+@media (max-width: 576px) {
+    main.page { padding-block: 20px 36px; }
+    .page-head h1 { font-size: 23px; }
+    .hero { padding: 32px 22px; }
+    .panel { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ---------- Vehicle photos + luxury tier ---------- */
+.vehicle-visual { height: 170px; overflow: hidden; }
+.vehicle-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vehicle-visual > .status, .vehicle-visual > .type-label, .vehicle-visual > .lux-ribbon { z-index: 1; }
+.vehicle-card.luxury { border-color: #e2c27a; }
+.vehicle-card.luxury .vehicle-visual { background: linear-gradient(135deg, #1d2333, #3a3220); color: var(--amber); }
+.lux-ribbon {
+    position: absolute; left: 12px; bottom: 12px; background: rgba(19,33,58,.88); color: var(--amber);
+    font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 4px 9px; border-radius: 6px; text-transform: uppercase;
+    display: inline-flex; gap: 6px; align-items: center;
+}
+.btn-locked { background: #f6f0e1; color: #7a5a12; border: 1px dashed #d9b765; }
+.btn-locked:hover { background: var(--amber); color: var(--ink); border-style: solid; }
+.book-photo { height: 200px; border-radius: 12px; overflow: hidden; position: relative; margin-bottom: 16px; display: grid; place-items: center; font-size: 56px; color: var(--brand); background: linear-gradient(135deg, #eef3ff, #f7f9fe); }
+.book-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.app-footer a { color: var(--muted); }
+
+/* ---------- Consistent vehicle cards (v4) ---------- */
+.vehicle-visual { height: 180px; }
+.vehicle-body { gap: 8px; }
+.vehicle-name { font-size: 17px; line-height: 1.3; min-height: 2.6em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.vehicle-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.vehicle-note { font-size: 12.5px; color: var(--muted); text-align: right; }
+.vehicle-price { margin: 4px 0 6px; }
+.lux-ribbon { font-size: 10.5px; letter-spacing: .08em; padding: 5px 10px; border: 1px solid rgba(245,183,46,.5); backdrop-filter: blur(4px); }
+.btn-locked { width: 100%; justify-content: center; font-size: 13.5px; }
